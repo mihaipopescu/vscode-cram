@@ -1,0 +1,31 @@
+{
+    "name": "Cram",
+    "displayName": "Cram Test Language Support",
+    "description": "Cram Test Syntax Highlight",
+    "version": "0.1.0",
+    "publisher": "mihaipopescu",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mihaipopescu/vscode-cram.git"
+    },
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "license": "MIT",
+    "contributes": {
+        "languages": [{
+            "id": "cram",
+            "aliases": ["Cram"],
+            "extensions": [".t"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cram",
+            "scopeName": "source.cram",
+            "path": "./syntaxes/cram.tmLanguage.json"
+        }]
+    }
+}

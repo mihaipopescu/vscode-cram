@@ -1,0 +1,36 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "cram",
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#command"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "name": "comment.line.cram",
+            "match": "^[^ ]{2}.*\n$",
+            "patterns": [
+                {}
+            ]
+        },
+        "command": {
+            "name": "storage.type.function.cram",
+            "begin": "  [$>] ",
+            "end": "(\n|\\\n)",
+            "patterns": [
+                {
+                    "match": "  > ",
+                    "name": "storage.type.function.cram"
+                },
+                {
+                    "include": "source.shell"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.cram"
+}
