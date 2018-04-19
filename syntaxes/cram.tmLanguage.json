@@ -27,6 +27,33 @@
                     "name": "storage.type.function.cram"
                 },
                 {
+                    "begin": "(<<)(\"|'|)\\s*\\\\?([^;&<\\s]+)\\2",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "keyword.operator.heredoc.shell"
+                        },
+                        "3": {
+                            "name": "keyword.contro.heredoc-token.shell"
+                        }
+                    },
+                    "end": "^(  > )(\\3)(?=\\s|;|&|$)",
+                    "endCaptures": {
+                        "1": {
+                            "name": "storage.type.function.cram"
+                        },
+                        "3": {
+                            "name": "keyword.control.heredoc-token.shell"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "match": "  > ",
+                            "name": "storage.type.function.cram"
+                        }
+                    ],
+                    "name": "string.unquoted.heredoc.shell"
+                },
+                {
                     "include": "source.shell"
                 }
             ]
