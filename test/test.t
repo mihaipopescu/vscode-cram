@@ -1,3 +1,8 @@
+Comment
+. Comment
+ . Comment
+// Comment
+
 Simple commands:
 
   $ echo foo
@@ -6,13 +11,14 @@ Simple commands:
   bar
   baz
 
-Multi-line command:
+Heredoc strings:
 
-  $ foo() {
-  >     echo bar
-  > }
-  $ foo
-  bar
+  $ cat <<EOF
+  > Hello
+  > EOF
+  Hello
+// comment
+
 
 Regular expression:
 
@@ -77,3 +83,15 @@ Command that closes a pipe:
 
 If Cram let Python's SIGPIPE handler get inherited by this script, we
 might see broken pipe messages.
+
+--=== KNOWN ISSUES ===--
+
+Multi-line command:
+
+  $ foo() {
+  >     echo bar
+  > }
+  $ foo
+  bar
+
+Comment
