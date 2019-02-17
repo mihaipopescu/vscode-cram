@@ -2,7 +2,6 @@
 
 [Cram](https://pypi.python.org/pypi/cram) is a functional testing framework for command line applications. Cram tests look like snippets of interactive shell sessions. Cram runs each command and compares the command output in the test with the command’s actual output.
 
-
 ## Features
 
 The extension provides a syntax definition for the Cram language.
@@ -13,22 +12,23 @@ For example, this is how the extension is highlighted in VS Code:
 
 ![syntax highlight example](images/syntax01.png)
 
-> Note: Writing cram files could be very sensitive to editor settings and make sure you have any kind of auto-formatting disabled such as tabs/spaces indentation, EOLs,
+> Note: The Cram language is sensitive to whitespace. Make sure to have any kind of formatting disabled in your IDE, such as tabs instead of spaces, predefined indentation, etc.
 
 ## Known Issues
 
 Language syntax issues:
-- commands using multi-line strings
 - commands declaring multi-line functions
 
-## Release Notes
+# Release Notes
 
-### 0.1.0
+### [0.2.0] - 2019-02-18
 
-First public cram language support in VSCode for basic syntax highlight.
+- Fixed support for heredoc strings
+- Fixed syntax highlight for comments starting with `.`
 
-## Planned features:
-- Test runner integration
+### [0.1.0] - 2016-05-01
+
+- Basic syntax highlight for Cram language
 
 ## License
 

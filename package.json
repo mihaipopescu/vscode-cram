@@ -2,7 +2,7 @@
     "name": "Cram",
     "displayName": "Cram Test Language Support",
     "description": "Cram Test Syntax Highlight",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "mihaipopescu",
     "repository": {
         "type": "git",
